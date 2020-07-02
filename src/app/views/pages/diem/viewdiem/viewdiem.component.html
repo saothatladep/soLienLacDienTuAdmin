@@ -1,0 +1,87 @@
+<!-- <nav class="navbar navbar-light justify-content-between"> -->
+  <div class="thda">
+    <div>
+      <label for="">Chọn khối</label>
+      <select class="form-control" [(ngModel)]="maKhoi">
+        <option value="">Tất cả khối</option>
+        <option *ngFor="let item of khoihocs;" [value]="item.maKhoi">{{item.tenKhoi}}</option>
+      </select>
+    </div>
+    <div>
+      <label for="">Chọn lớp</label>
+      <select class="form-control" [(ngModel)]="maLop">
+        <option value="">Tất cả lớp</option>
+        <option *ngFor="let item of lophocs;" [value]="item.maLop">{{item.tenLop}}</option>
+      </select>
+    </div>
+    <div>
+      <label for="">Chọn môn</label>
+      <select class="form-control" [(ngModel)]="maMon">
+        <option value="">Tất cả môn</option>
+        <option *ngFor="let item of monhocs;" [value]="item.maMon">{{item.tenMon}}</option>
+      </select>
+    </div>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+  </div>
+<!-- </nav> -->
+<table class="table table-hover" style="border: 2px solid #000000;">
+  <thead>
+    <tr>
+      <th scope="col" rowspan="2">STT</th>
+      <th scope="col" rowspan="2">Mã</th>
+      <th scope="col" rowspan="2">Tên</th>
+      <th scope="col" colspan="5">Điểm miệng</th>
+      <th scope="col" colspan="5">Điểm 15 phút</th>
+      <th scope="col" colspan="4">Điểm 45 phút</th>
+      <th scope="col" rowspan="2">Thi</th>
+      <th scope="col" rowspan="2">Điểm học kỳ</th>
+      <th scope="col" rowspan="2">TB Mon</th>
+    </tr>
+    <tr>
+      <th scope="col">1</th>
+      <th scope="col">2</th>
+      <th scope="col">3</th>
+      <th scope="col">4</th>
+      <th scope="col">5</th>
+      <th scope="col">1</th>
+      <th scope="col">2</th>
+      <th scope="col">3</th>
+      <th scope="col">4</th>
+      <th scope="col">5</th>
+      <th scope="col">1</th>
+      <th scope="col">2</th>
+      <th scope="col">3</th>
+      <th scope="col">4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of diems,let i=index">
+      <td>{{i+1}}</td>
+      <td>{{item.maHs}}</td>
+      <td>{{item.tenHs}}</td>
+      <td>{{item.diemMieng1}}</td>
+      <td>{{item.diemMieng2}}</td>
+      <td>{{item.diemMieng3}}</td>
+      <td>{{item.diemMieng4}}</td>
+      <td>{{item.diemMieng5}}</td>
+      <td>{{item.diem151}}</td>
+      <td>{{item.diem152}}</td>
+      <td>{{item.diem153}}</td>
+      <td>{{item.diem154}}</td>
+      <td>{{item.diem155}}</td>
+      <td>{{item.diem451}}</td>
+      <td>{{item.diem452}}</td>
+      <td>{{item.diem453}}</td>
+      <td>{{item.diem454}}</td>
+      <td>{{item.diemThi}}</td>
+      <td>{{item.dtbmonHocKy}}</td>
+      <td>{{item.dtbmonCaNam}}</td>
+      <!-- <button type="button" class="btn btn-info">Chi tiết</button>
+        <button type="button" class="btn btn-danger">Xoá</button>
+        <button type="button" class="btn btn-warning">Sửa</button> -->
+    </tr>
+  </tbody>
+</table>

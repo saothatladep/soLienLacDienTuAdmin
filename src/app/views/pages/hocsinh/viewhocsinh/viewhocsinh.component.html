@@ -1,0 +1,82 @@
+<p>lophoc works!</p>
+<!-- <div class="container"> -->
+<!-- <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</div> -->
+<!--search-->
+<nav class="navbar navbar-light justify-content-between">
+    <!-- <a class="navbar-brand">Navbar</a> -->
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </div>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">STT</th>
+          <th scope="col">Mã học sinh</th>
+          <th scope="col">Tên học sinh</th>
+          <th scope="col">Giới tính</th>
+          <th scope="col">Ngày sinh</th>
+          <th scope="col">Quê quán</th>
+          <th scope="col">SDT</th>
+          <th scope="col">Email</th>
+          <th scope="col">Họ tên cha</th>
+          <th scope="col">Địa chỉ cha</th>
+          <th scope="col">SĐT cha</th>
+          <th scope="col">Họ tên mẹ</th>
+          <th scope="col">Địa chỉ mẹ</th>
+          <th scope="col">SĐT mẹ</th>
+          <th scope="col">Mật khẩu</th>
+          <th scope="col">Hình ảnh</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of hocsinhs,let i=index">
+          <td>{{i+1}}</td>
+          <td>{{item.maHs}}</td>
+          <td>{{item.tenHs}}</td>
+          <td>{{item.gioiTinh}}</td>
+          <td>{{item.ngaySinh}}</td>
+          <td>{{item.queQuan}}</td>
+          <td>{{item.sdt}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.hoTenCha}}</td>
+          <td>{{item.diaChiCha}}</td>
+          <td>{{item.sdtcha}}</td>
+          <td>{{item.hoTenMe}}</td>
+          <td>{{item.diaChiMe}}</td>
+          <td>{{item.sdtme}}</td>
+          <td>{{item.matKhau}}</td>
+          <td>{{item.hinhAnh}}</td>
+
+          <!-- <td >
+            <a class="btn text-danger" [routerLink]="['/nhatuyendung/chitietnhatuyendung',item.idNhatuyendung]" >
+              <i class="fa fa-pencil"></i> 
+            </a>
+          </td> -->
+          <button type="button" class="btn btn-info">Chi tiết</button>
+          <button type="button" class="btn btn-danger">Xoá</button>
+          <button type="button" class="btn btn-warning">Sửa</button>
+          <!-- <a class="edit" title="Edit" data-toggle="tooltip"><i class="fa fa-pencil">&#xE254;</i></a> -->
+        </tr>
+      </tbody>
+    </table>
+    <!-- </div> -->
+    

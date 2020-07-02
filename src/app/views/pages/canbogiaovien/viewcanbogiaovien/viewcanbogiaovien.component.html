@@ -1,0 +1,67 @@
+
+<!-- <div class="container"> -->
+<!-- <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</div> -->
+<!--search-->
+<nav class="navbar navbar-light justify-content-between">
+    <!-- <a class="navbar-brand">Navbar</a> -->
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </div>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Nhập thông tin tìm kiếm" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+    </form>
+  </nav>
+  <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">STT</th>
+          <th scope="col">Mã CBGV</th>
+          <th scope="col">Tên cán bộ</th>
+          <th scope="col">Ngày sinh</th>
+          <th scope="col">Địa chỉ</th>
+          <th scope="col">Giới tính</th>
+          <th scope="col">SDT</th>
+          <th scope="col">Email</th>
+          <th scope="col">Mật Khẩu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of canbogiaoviens,let i=index">
+          <td>{{i+1}}</td>
+          <td>{{item.maCanBoGv}}</td>
+          <td>{{item.tenCanBo}}</td>
+          <td>{{item.ngaySinh}}</td>
+          <td>{{item.diaChi}}</td>
+          <td>{{item.gioiTinh}}</td>
+          <td>{{item.sdt}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.matKhau}}</td>
+          <!-- <td >
+            <a class="btn text-danger" [routerLink]="['/nhatuyendung/chitietnhatuyendung',item.idNhatuyendung]" >
+              <i class="fa fa-pencil"></i> 
+            </a>
+          </td> -->
+          <button type="button" class="btn btn-info">Chi tiết</button>
+          <button type="button" class="btn btn-success">Thêm</button>
+          <button type="button" class="btn btn-danger">Xoá</button>
+          <button type="button" class="btn btn-warning">Sửa</button>
+          <!-- <a class="edit" title="Edit" data-toggle="tooltip"><i class="fa fa-pencil">&#xE254;</i></a> -->
+        </tr>
+      </tbody>
+    </table>
+    <!-- </div> -->

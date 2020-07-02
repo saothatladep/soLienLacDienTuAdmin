@@ -1,0 +1,58 @@
+<p>lophoc works!</p>
+<!-- <div class="container"> -->
+<!-- <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</div> -->
+<!--search-->
+<nav class="navbar navbar-light justify-content-between">
+    <!-- <a class="navbar-brand">Navbar</a> -->
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </div>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">STT</th>
+          <th scope="col">Mã lớp</th>
+          <th scope="col">Tên lớp</th>
+          <th scope="col">Mã khối</th>
+          <th scope="col">Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of lophocs,let i=index">
+          <td>{{i+1}}</td>
+          <td>{{item.maLop}}</td>
+          <td>{{item.tenLop}}</td>
+          <td>{{item.maKhoi}}</td>
+          <!-- <td >
+            <a class="btn text-danger" [routerLink]="['/nhatuyendung/chitietnhatuyendung',item.idNhatuyendung]" >
+              <i class="fa fa-pencil"></i> 
+            </a>
+          </td> -->
+          <button type="button" class="btn btn-info">Chi tiết</button>
+          <button type="button" class="btn btn-danger">Xoá</button>
+          <button type="button" class="btn btn-warning">Sửa</button>
+          <!-- <a class="edit" title="Edit" data-toggle="tooltip"><i class="fa fa-pencil">&#xE254;</i></a> -->
+        </tr>
+      </tbody>
+    </table>
+    <!-- </div> -->
+    

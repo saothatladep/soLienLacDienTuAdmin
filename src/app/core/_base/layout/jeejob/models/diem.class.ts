@@ -1,0 +1,24 @@
+export class Diem{
+    public maHs: string;
+    public tenHs: string;
+    public maMon: number;
+    public maKy: number;
+    public maNam: number;
+    public diemMieng1: number;
+    public diemMieng2: number;
+    public diemMieng3: number;
+    public diemMieng4: number;
+    public diemMieng5: number;
+    public diem151: number;
+    public diem152: number;
+    public diem153: number;
+    public diem154: number;
+    public diem155: number;
+    public diem451: number;
+    public diem452: number;
+    public diem453: number;
+    public diem454: number;
+    public diemThi: number;
+    public dtbMonHocKy: number;
+    public dtbMonCaNam: number;
+}
