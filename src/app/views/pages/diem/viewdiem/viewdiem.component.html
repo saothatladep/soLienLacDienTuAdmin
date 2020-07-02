@@ -2,21 +2,21 @@
   <div class="thda">
     <div>
       <label for="">Chọn khối</label>
-      <select class="form-control" [(ngModel)]="maKhoi">
+      <select class="form-control" [(ngModel)]="makhoi" (change)="chonkhoi()">
         <option value="">Tất cả khối</option>
-        <option *ngFor="let item of khoihocs;" [value]="item.maKhoi">{{item.tenKhoi}}</option>
+        <option *ngFor="let item of khoihocs;"  [value]="item.maKhoi">{{item.tenKhoi}}</option>
       </select>
     </div>
     <div>
       <label for="">Chọn lớp</label>
       <select class="form-control" [(ngModel)]="maLop">
         <option value="">Tất cả lớp</option>
-        <option *ngFor="let item of lophocs;" [value]="item.maLop">{{item.tenLop}}</option>
+        <option *ngFor="let item of chanvl;" [value]="item.maLop">{{item.tenLop}}</option>
       </select>
     </div>
     <div>
       <label for="">Chọn môn</label>
-      <select class="form-control" [(ngModel)]="maMon">
+      <select class="form-control" [(ngModel)]="maMon" >
         <option value="">Tất cả môn</option>
         <option *ngFor="let item of monhocs;" [value]="item.maMon">{{item.tenMon}}</option>
       </select>
@@ -27,7 +27,7 @@
       </form>
   </div>
 <!-- </nav> -->
-<table class="table table-hover" style="border: 2px solid #000000;">
+<table class="table table-striped" style="border: 2px solid #000000;">
   <thead>
     <tr>
       <th scope="col" rowspan="2">STT</th>
@@ -79,9 +79,6 @@
       <td>{{item.diemThi}}</td>
       <td>{{item.dtbmonHocKy}}</td>
       <td>{{item.dtbmonCaNam}}</td>
-      <!-- <button type="button" class="btn btn-info">Chi tiết</button>
-        <button type="button" class="btn btn-danger">Xoá</button>
-        <button type="button" class="btn btn-warning">Sửa</button> -->
     </tr>
   </tbody>
 </table>

@@ -19,6 +19,7 @@ export class ViewdiemComponent implements OnInit {
   public diems=[];
   public khoihocs: KhoiHoc[] = [];
   public lophocs: Lophoc[] = [];
+  public chanvl: Lophoc[] = [];
   public monhocs: MonHoc[] = [];
   constructor(
     public activateRoute:ActivatedRoute,
@@ -52,10 +53,20 @@ loadMonHoc(){
 }
 loadLopHoc(){
   this.serviceLopHoc.getLopHoc().subscribe(data => {
-    this.lophocs = data;
+    this.chanvl=this.lophocs = data;
     console.log(this.lophocs);
   }
   )
+}
+makhoi=0;
+filtersv(makhoi:number){
+  makhoi=5;
+  this.diems.filter(x=>x.MaMon==makhoi);
+  console.log(this.diems);
+}
+
+chonkhoi(){
+  this.chanvl=this.lophocs.filter(x=>x.maKhoi==this.makhoi)
 }
 //Sự kiên change
 
