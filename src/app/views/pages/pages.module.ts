@@ -18,15 +18,8 @@ import { ViewhocsinhComponent } from './hocsinh/viewhocsinh/viewhocsinh.componen
 import { DiemComponent } from './diem/diem.component';
 import { AdminsComponent } from './admins/admins.component';
 import { ViewadminsComponent } from './admins/viewadmins/viewadmins.component';
-// import { UserManagementModule } from './user-management/user-management.module';
-// import { NhatuyendungComponent } from './nhatuyendung/nhatuyendung.component';
-// import { ViewnhatuyendungComponent } from './nhatuyendung/viewnhatuyendung/viewnhatuyendung.component';
-// import { UngvienComponent } from './ungvien/ungvien.component';
-// import { TintuyendungComponent } from './tintuyendung/tintuyendung.component';
-// import { ViewungvienComponent } from './ungvien/viewungvien/viewungvien.component';
-// import { ViewtintuyendungComponent } from './tintuyendung/viewtintuyendung/viewtintuyendung.component';
 @NgModule({
-	declarations: [AdminsComponent, ViewadminsComponent],
+	declarations: [],
 	exports: [],
 	imports: [
 		CommonModule,
@@ -36,7 +29,6 @@ import { ViewadminsComponent } from './admins/viewadmins/viewadmins.component';
 		PartialsModule,
 		MailModule,
 		ECommerceModule,
-		// UserManagementModule,
 	],
 	providers: []
 })

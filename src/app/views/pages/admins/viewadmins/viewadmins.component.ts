@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Admin } from '../../../../core/_base/layout/jeejob/models/admin.class';
+import { AdminService } from '../../../../core/_base/layout/jeejob/services/admin.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'kt-viewadmins',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewadminsComponent implements OnInit {
 
-  constructor() { }
+  public admins: Admin[]=[];
+  constructor(
+    public activateRoute: ActivatedRoute,
+    public serviceAdmin: AdminService,
+	) {}
 
-  ngOnInit() {
+	ngOnInit(): void {
+    this.loadAdmin();
   }
+  
+  loadAdmin(){
+    this.serviceAdmin.getAdmin().subscribe(
+			(data) => {
+        this.admins = data;
+        console.log(data)
+      },
+      
+		);
+	}
 
 }

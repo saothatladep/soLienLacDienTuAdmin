@@ -19,23 +19,6 @@ const routes: Routes = [
 				path: 'dashboard',
 				loadChildren: () => import('app/views/pages/dashboard/dashboard.module').then(m => m.DashboardModule),
 			},
-			// {
-			// 	path: 'mail',
-			// 	loadChildren: () => import('app/views/pages/apps/mail/mail.module').then(m => m.MailModule),
-			// },
-			// {
-			// 	path: 'ecommerce',
-			// 	loadChildren: () => import('app/views/pages/apps/e-commerce/e-commerce.module').then(m => m.ECommerceModule),
-			// },
-			// {
-			// 	path: 'ngbootstrap',
-			// 	loadChildren: () => import('app/views/pages/ngbootstrap/ngbootstrap.module').then(m => m.NgbootstrapModule),
-			// },
-			// {
-			// 	path: 'material',
-			// 	loadChildren: () => import('app/views/pages/material/material.module').then(m => m.MaterialModule),
-			// },
-
 			//lop hoc
 			{
 				path: 'lophoc',
@@ -55,6 +38,11 @@ const routes: Routes = [
 			{
 				path: 'hocsinh',
 				loadChildren: () => import('app/views/pages/hocsinh/hocsinh.module').then(m => m.HocSinhModule),
+			},
+			//Admins
+			{
+				path: 'admins',
+				loadChildren: () => import('app/views/pages/admins/admins.module').then(m => m.AdminsModule),
 			},
 			{path: 'error/:type', component: ErrorPageComponent},
 			{path: '', redirectTo: 'dashboard', pathMatch: 'full'},

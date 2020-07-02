@@ -1,1 +1,20 @@
-<p>viewadmins works!</p>
+<!-----------------------------Bảng Admins---------------------------->
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">STT</th>
+        <th scope="col">Mã admin</th>
+        <th scope="col">Tên đăng nhập</th>
+        <th scope="col">Mật khẩu</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+        <tbody>
+            <tr *ngFor="let item of admins,let i=index">
+              <td>{{i+1}}</td>
+              <td>{{item.maAdmin}}</td>
+              <td>{{item.tenDangNhap}}</td>
+              <td>{{item.matKhau}}</td>
+              <td>{{item.email}}</td>
+    </tbody>
+  </table>

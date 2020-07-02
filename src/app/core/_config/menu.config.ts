@@ -10,31 +10,6 @@ export class MenuConfig {
 					page: '/dashboard',
 					translate: 'MENU.DASHBOARD',
 				},
-				// {
-				// 	title: 'Nhà tuyển dụng',
-				// 	root: true,
-				// 	alignment: 'left',
-				// 	toggle: 'click',
-				// 	submenu: [
-				// 		{
-				// 			title: 'Quản lý nhà tuyển dụng',
-				// 			bullet: 'dot',
-				// 			icon: 'flaticon-business',
-				// 			// permission: 'accessToECommerceModule',
-				// 			submenu: [
-				// 				{
-				// 					title: 'Danh sách nhà tuyển dụng',
-				// 					page: '/nhatuyendung/listnhatuyendung'
-				// 				},
-				// 				// {
-				// 				// 	title: 'Chi tiết nhà tuyển dụng',
-				// 				// 	page: '/nhatuyendung/chitietnhatuyendung'
-				// 				// },
-								
-				// 			]
-				// 		},
-				// 	]
-				// },
 				//lop hoc
 				{
 					title: 'Lớp học',
@@ -56,11 +31,6 @@ export class MenuConfig {
 									title: 'Danh sách học sinh',
 									page: '/hocsinh'
 								},
-								// {
-								// 	title: 'Chi tiết ứng viên',
-								// 	page: '/ungvien/chitietungvien'
-								// },
-								
 							]
 						},
 					]
@@ -103,11 +73,6 @@ export class MenuConfig {
 									title: 'Danh sách cán bộ giáo viên',
 									page: '/canbogiaovien'
 								},
-								// {
-								// 	title: 'Chi tiết ứng viên',
-								// 	page: '/ungvien/chitietungvien'
-								// },
-								
 							]
 						},
 					]
@@ -128,30 +93,26 @@ export class MenuConfig {
 									title: 'Danh sách học sinh',
 									page: '/hocsinh'
 								},
-								// {
-								// 	title: 'Chi tiết ứng viên',
-								// 	page: '/ungvien/chitietungvien'
-								// },
-								
 							]
 						},
 					]
 				},
+				//admins
 				{
-					title: 'Thống kê',
+					title: 'Admin',
 					root: true,
 					alignment: 'left',
 					toggle: 'click',
 					submenu: [
 						{
-							title: 'Thống kê',
+							title: 'Quản lý admins',
 							bullet: 'dot',
 							icon: 'flaticon-business',
 							// permission: 'accessToECommerceModule',
 							submenu: [
 								{
-									title: 'Quản lý thống kê',
-									page: '/thongke'
+									title: 'Danh sách admins',
+									page: '/admins'
 								},
 								
 							]
